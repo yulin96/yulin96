@@ -1,10 +1,6 @@
 ## Hi there 👋
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/yulin96/yulin96/raw/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yulin96/yulin96/output/github-contribution-grid-snake.svg">
-  <img src="https://raw.githubusercontent.com/yulin96/yulin96/output/github-contribution-grid-snake.svg" alt="snake">
-</picture>
+![snake](https://raw.githubusercontent.com/yulin96/yulin96/output/github-contribution-grid-snake.svg)
 
 <!--
 **yulin96/yulin96** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
