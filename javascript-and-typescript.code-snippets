@@ -1,0 +1,365 @@
+{
+	"arrow function": {
+		"scope": "javascript,typescript",
+		"prefix": "an",
+		"body": [
+			"($1) => $2"
+		],
+		"description": "arrow function"
+	},
+	"cst": {
+		"scope": "javascript,typescript",
+		"prefix": "cst",
+		"body": [
+			"const { t } = useI18n()"
+		],
+		"description": "cst"
+	},
+	"const store": {
+		"scope": "javascript,typescript",
+		"prefix": "css",
+		"body": [
+			"const { user } = useStore()"
+		],
+		"description": "store function"
+	},
+	"const post": {
+		"scope": "javascript,typescript",
+		"prefix": "csp",
+		"body": [
+			"const { post: post${1/(.*)/${1:/capitalize}/} } = useLock()"
+		],
+		"description": "lock function"
+	},
+	"const get": {
+		"scope": "javascript,typescript",
+		"prefix": "csg",
+		"body": [
+			"const { get: get${1/(.*)/${1:/capitalize}/} } = useLock()"
+		],
+		"description": "lock function"
+	},
+	"cpp": {
+		"scope": "javascript,typescript",
+		"prefix": "cpp",
+		"body": [
+			"const [promise, resolve, reject, isPending] = usePromise<${1:never}>()"
+		],
+		"description": "cpp"
+	},
+	"cpt": {
+		"scope": "javascript,typescript",
+		"prefix": "cpt",
+		"body": [
+			"const [isProcessing, createToast] = useToaster('${1:加载中...}')"
+		],
+		"description": "cpt"
+	},
+	"cptc": {
+		"scope": "javascript,typescript",
+		"prefix": "cptc",
+		"body": [
+			"const [resolve, reject] = createToast()"
+		],
+		"description": "cptc"
+	},
+	"cpr": {
+		"scope": "javascript,typescript",
+		"prefix": "cpr",
+		"body": [
+			"const [resolve, reject] = createToaster('${1:加载中...}')"
+		],
+		"description": "cpr"
+	},
+	"timer": {
+		"scope": "javascript,typescript",
+		"prefix": "a_timer",
+		"body": [
+			"const { sending, timerText, startTimer } = useCountdown()"
+		],
+		"description": "timer"
+	},
+	"a_watch": {
+		"scope": "javascript,typescript",
+		"prefix": "a_watch",
+		"body": [
+			"watch($1, (newVal, oldVal) => {",
+			" $2 ",
+			"})"
+		],
+		"description": "a_watch"
+	},
+	"a_watch2": {
+		"scope": "javascript,typescript",
+		"prefix": "a_watch2",
+		"body": [
+			"watch(",
+			"  () => $1,",
+			"  (newVal, oldVal) => {",
+			"  $2  ",
+			"  },",
+			")"
+		],
+		"description": "a_watch2"
+	},
+	"route": {
+		"scope": "javascript,typescript",
+		"prefix": "cr",
+		"body": [
+			"const route = useRoute($1)"
+		],
+		"description": "route"
+	},
+	"crr": {
+		"scope": "javascript,typescript",
+		"prefix": "crr",
+		"body": [
+			"const router = useRouter()"
+		],
+		"description": "crr"
+	},
+	"rr": {
+		"scope": "javascript,typescript",
+		"prefix": "rr",
+		"body": [
+			"router.replace({ name: '$1' })"
+		],
+		"description": "rr"
+	},
+	"tt": {
+		"scope": "javascript,typescript",
+		"prefix": "tt",
+		"body": [
+			"const [${1}, set${1/(.*)/${1:/capitalize}/}] = useToggle(false)"
+		],
+		"description": "tt"
+	},
+	"seg": {
+		"scope": "javascript,typescript",
+		"prefix": "seg",
+		"body": [
+			"const [segment${1/(.*)/${1:/capitalize}/}, ${1}] = createReusableTemplate<{}>()"
+		],
+		"description": "seg"
+	},
+	"znow": {
+		"scope": "javascript,typescript",
+		"prefix": "a_now",
+		"body": [
+			"const formatted = useDateFormat(useNow(), 'YYYY-MM-DD HH:mm:ss')"
+		],
+		"description": "znow"
+	},
+	"zpoll": {
+		"scope": "javascript,typescript",
+		"prefix": "a_poll",
+		"body": [
+			"const { pause, resume } = useTimeoutPoll(${1:pollName}, 5000)"
+		],
+		"description": "zpoll"
+	},
+	"zhtml2": {
+		"scope": "javascript,typescript",
+		"prefix": "a_html2",
+		"body": [
+			"const html2 = document.querySelector('[html2canvas]') as HTMLDivElement",
+			"html2canvas(html2, {",
+			"  useCORS: true,",
+			"  width: html2.offsetWidth,",
+			"  height: html2.offsetHeight,",
+			"  backgroundColor: 'none',",
+			"  ignoreElements: (el) => el.classList.contains('html2-hide'),",
+			"}).then((canvas) => {",
+			"  const url = canvas.toDataURL('image/jpeg')",
+			"})"
+		],
+		"description": "zhtml2"
+	},
+	"zpag": {
+		"scope": "javascript,typescript",
+		"prefix": "a_pag",
+		"body": [
+			"const { currentPage, currentPageSize, pageCount, isFirstPage, isLastPage, prev, next } = useOffsetPagination({",
+			"  total: ${1},",
+			"  page: 1,",
+			"  pageSize: 10,",
+			"  onPageChange: ${2},",
+			"})"
+		],
+		"description": "zpag"
+	},
+	"aw": {
+		"scope": "javascript,typescript",
+		"prefix": "aw",
+		"body": [
+			"const ${2:res} = await $1()",
+			"if (${2:res}.code != 200) return toast.info(${2:res}?.message || ${2:res}?.msg || '正在处理中...')"
+		],
+		"description": "aw"
+	},
+	"awthen": {
+		"scope": "javascript,typescript",
+		"prefix": "awthen",
+		"body": [
+			"$1().then((${2:res}) => {",
+			"  if (${2:res}.code != 200) return toast.info(${2:res}?.message || ${2:res}?.msg || '正在处理中...')",
+			"})"
+		],
+		"description": "awthen"
+	},
+	"crl": {
+		"scope": "javascript,typescript",
+		"prefix": "crl",
+		"body": [
+			"const [refList, setRef] = useRef()",
+		],
+		"description": "crl"
+	},
+	"ag": {
+		"scope": "javascript,typescript",
+		"prefix": "ag",
+		"body": [
+			"const { get: get${1/(.*)/${1:/capitalize}/} } = useLock()",
+			"export const api${1/(.*)/${1:/capitalize}/} = (data?: Record<string, any>) => {",
+			"  type T = any",
+			"  return new Promise<ResData<T>>((resolve, _) => {",
+			"    get${1/(.*)/${1:/capitalize}/}('/${1}', data)",
+			"      .then((res) => {",
+			"        resolve(res as ResData<T>)",
+			"      })",
+			"      .catch(() => {})",
+			"  })",
+			"}"
+		],
+		"description": "ag"
+	},
+	"ap": {
+		"scope": "javascript,typescript",
+		"prefix": "ap",
+		"body": [
+			"const { post: post${1/(.*)/${1:/capitalize}/} } = useLock()",
+			"export const api${1/(.*)/${1:/capitalize}/} = (data?: Record<string, any>) => {",
+			"  type T = any",
+			"  return new Promise<ResData<T>>((resolve, _) => {",
+			"    post${1/(.*)/${1:/capitalize}/}('/${1}', data)",
+			"      .then((res) => {",
+			"        resolve(res as ResData<T>)",
+			"      })",
+			"      .catch(() => {})",
+			"  })",
+			"}",
+		],
+		"description": "ap"
+	},
+	"zPopup": {
+		"scope": "javascript,typescript",
+		"prefix": "zPopup",
+		"body": [
+			"const { show, title, columns, confirm, cancel, showPopup } = usePopup([",
+			"  {",
+			"    id: 1,",
+			"    title: '',",
+			"    columns: [{ text: '', value: '' }],",
+			"    onConfirm: ({ selectedValues }) => {",
+			"      console.log(selectedValues)",
+			"    },",
+			"  },",
+			"])"
+		],
+		"description": "zPopup"
+	},
+	"toOSS": {
+		"scope": "javascript,typescript",
+		"prefix": "toOSS",
+		"body": [
+			"const ossURL = await useUploadOSS({ projectID: '${1}', file, filenameStart: '${2:zh}', filetype: '${3:png}' })"
+		],
+		"description": "toOSS"
+	},
+	"ef": {
+		"scope": "javascript,typescript",
+		"prefix": "ef",
+		"body": [
+			"export function ${1:name}(${2:params}) {",
+			"  ",
+			"}"
+		],
+		"description": "ef"
+	},
+	"a_fun": {
+		"scope": "javascript,typescript",
+		"prefix": "a_fun",
+		"body": [
+			"function ${1:name}() {",
+			"  $2",
+			"}"
+		],
+		"description": "a_fun"
+	},
+	"ca": {
+		"scope": "javascript,typescript",
+		"prefix": "ca",
+		"body": [
+			"const ${1:name} = ref(${2})",
+		],
+		"description": "ca"
+	},
+	"cc": {
+		"scope": "javascript,typescript",
+		"prefix": "cc",
+		"body": [
+			"const ${1:name} = computed(() => ${2})",
+		],
+		"description": "cc"
+	},
+	"a_onMounted": {
+		"scope": "javascript,typescript",
+		"prefix": "a_onMounted",
+		"body": [
+			"onMounted(() => {",
+			"  $1",
+			"})"
+		],
+		"description": "a_onMounted"
+	},
+	"a_onBeforeUnmount": {
+		"scope": "javascript,typescript",
+		"prefix": "a_onBeforeUnmount",
+		"body": [
+			"onBeforeUnmount(() => {",
+			"  $1",
+			"})"
+		],
+		"description": "a_onBeforeUnmount"
+	},
+	"a_onUnmounted": {
+		"scope": "javascript,typescript",
+		"prefix": "a_onUnmounted",
+		"body": [
+			"onUnmounted(() => {",
+			"  $1",
+			"})"
+		],
+		"description": "a_onUnmounted"
+	},
+	"a_onDeactivated": {
+		"scope": "javascript,typescript",
+		"prefix": "a_onDeactivated",
+		"body": [
+			"onDeactivated(() => {",
+			"  $1",
+			"})"
+		],
+		"description": "a_onDeactivated"
+	},
+	"a_onActivated": {
+		"scope": "javascript,typescript",
+		"prefix": "a_onActivated",
+		"body": [
+			"onActivated(() => {",
+			"  $1",
+			"})"
+		],
+		"description": "a_onActivated"
+	},
+}
